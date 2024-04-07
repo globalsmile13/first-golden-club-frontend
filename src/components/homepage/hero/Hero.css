@@ -9,7 +9,7 @@
 
 .hero:before {
     content: "";
-    background: url(../../assets/Group-1.png ) no-repeat center right contain;
+    background: url(../../assets/Group-1.png ) no-repeat center right/contain;
     object-fit: contain;
     height: 100%;
     width: 100%;
@@ -100,7 +100,7 @@
     } 
     
     .hero:before {
-        background-position: center top right;
+        background-position: center top/right;
         
     }
 
