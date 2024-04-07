@@ -16,11 +16,11 @@
 
 @media screen and (max-width: 768px) {
     .quest-container {
-        margin: 5% 0; /* Adjusted margin for smaller screens */
+        margin: 5% 0; 
     }
 
     .quest-content {
-        margin: 2% 3%; /* Further adjusted margin for smaller screens */
-        padding: 2%; /* Adjusted padding for smaller screens */
+        margin: 2% 3%; 
+        padding: 2%; 
     }
 }

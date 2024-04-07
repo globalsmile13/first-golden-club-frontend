@@ -9,7 +9,7 @@
 
 .hero:before {
     content: "";
-    background: url(../../assets/Group\ 1.png ) no-repeat center right/contain;
+    background: url(../../assets/Group-1.png ) no-repeat center right contain;
     object-fit: contain;
     height: 100%;
     width: 100%;
@@ -96,12 +96,11 @@
     .hero{
         right: 0px;
         top: 0;
-        /* bottom: 10px; */
+       
     } 
     
     .hero:before {
-        background-position: center top/right;
-        /* top: 150px; */
+        background-position: center top right;
         
     }
 
@@ -138,7 +137,7 @@
         font-size: 25px;
         font-weight: 500;
         padding: 0.2rem 0;
-        /* margin-top: 10px; */
+        
     }
     
     .hero-container p:nth-child(2)  {
@@ -153,10 +152,6 @@
         bottom: 10px;
     } 
     
-    /* .hero:before {
-        background-position: center top;
-        top: 150px;
-        
-    } */
+    
 }
 

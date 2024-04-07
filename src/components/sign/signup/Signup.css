@@ -156,8 +156,8 @@ button:disabled {
   
   @media screen and (max-width: 768px) {
     .signup-heading {
-        grid-template-columns: 1fr; /* Change to single column layout on smaller screens */
-        justify-items: center; /* Center align elements */
+        grid-template-columns: 1fr; 
+        justify-items: center; 
     }
 
     .signup-container:before {
@@ -167,37 +167,37 @@ button:disabled {
     }
 
     .signup-heading > .logo > img {
-        margin-top: 10px; /* Adjust margin for smaller screens */
+        margin-top: 10px; 
     }
 
     .signup-heading h3 {
-        text-align: center; /* Center align text on smaller screens */
-        margin: 0.5rem 0; /* Adjust margin for smaller screens */
+        text-align: center; 
+        margin: 0.5rem 0; 
     }
 
     .signup-content {
-        align-items: center; /* Center align content */
+        align-items: center;
     }
 
     .signup-form {
-        margin-left: 0; /* Remove left margin for smaller screens */
+        margin-left: 0;
     }
 
     .signup-label > input, .signup-label > #password {
-        margin: 1rem auto; /* Center input fields */
+        margin: 1rem auto;
     }
 
     .signup-button > button {
-        margin: 2rem auto; /* Center button */
+        margin: 2rem auto; 
     }
 
     .signup-toplabel {
-        grid-template-columns: 1fr; /* Change to single column layout on smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     
     .signup-agreement p {
-        margin: 0 auto; /* Center agreement text */
+        margin: 0 auto;
         width: 300px;
     }
 }

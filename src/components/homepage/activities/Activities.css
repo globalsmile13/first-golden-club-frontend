@@ -10,7 +10,7 @@
 
 .activities-heading {
     text-align: center;
-     /* Adjust spacing between headings and cards */
+    
     
 }
 
@@ -26,9 +26,6 @@
 .card-activities {
   
     width: 100%;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -41,7 +38,6 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     font-size: 20px;
-    /* margin: 1rem; */
     padding: 2rem;
     border-radius: 30px;
     width: 100%;
@@ -52,11 +48,10 @@
     display: flex;
     justify-content: flex-end;
     text-align: right;
-    /* background-color: rgb(172, 226, 172); */
 }
 
 .card-act.odd {
-    /* background: radial-gradient(circle, #dddddd, #96959533); */
+    
     background-color: rgb(172, 226, 172);
   
 }
@@ -146,7 +141,7 @@
 
     .act-num,
     .even-num {
-        font-size: 40px; /* Adjusted font size for smaller screens */
+        font-size: 40px;
         margin: 0 1rem;
     }
 

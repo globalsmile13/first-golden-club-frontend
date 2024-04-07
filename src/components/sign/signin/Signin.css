@@ -140,7 +140,7 @@ input::placeholder {
 
 @media screen and (max-width: 768px) {
     .signin-container {
-        height: auto; /* Adjust height for smaller screens */
+        height: auto; 
     }
 
     .signin-container:before {
@@ -149,41 +149,41 @@ input::placeholder {
         background-size: contain;
     }
     .signin-heading {
-        grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     .signin-heading h3 {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 20px; 
     }
 
     .signin-heading > .logo > img {
-        height: 60px; /* Adjust logo size for smaller screens */
+        height: 60px;
     }
 
     .signin-content {
-        padding: 0 10px; /* Add padding for smaller screens */
+        padding: 0 10px;
     }
 
     .signin-account h2 {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 18px;
     }
 
     .signin-form {
-        margin-left: 0; /* Adjust margin for smaller screens */
+        margin-left: 0;
     }
 
     .signin-label > input,
     #password,
     .signin-form button {
-        width: 100%; /* Make inputs and buttons full width for smaller screens */
-        max-width: none; /* Remove max-width for smaller screens */
+        width: 100%; 
+        max-width: none; 
     }
 
     .signin-form button {
-        margin: 2rem 0; /* Adjust margin for smaller screens */
+        margin: 2rem 0;
     }
 
     .signin-agreement > p {
-        max-width: none; /* Remove max-width for smaller screens */
+        max-width: none;
     }
 }

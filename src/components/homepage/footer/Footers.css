@@ -64,7 +64,7 @@
 
 @media screen and (max-width: 768px) {
     .footer-content {
-        grid-template-columns: 1fr ; /* Adjusted grid layout for smaller screens */
+        grid-template-columns: 1fr ; 
     }
 
     .footer-writeup {
