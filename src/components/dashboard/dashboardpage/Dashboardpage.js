@@ -73,12 +73,12 @@ const Dashboardpage = () => {
       <nav className={click? 'dashboard-heading active' : 'dashboard-heading'}>
         <img src= {Logo} alt='Logo'/>
         <div className='dashborad-headingicon'>
-          {myProfile.upgrade_date && 
+          {myProfile?.upgrade_date !== null && 
           <div className='dashboard-timeout'>
             <Link to='/activate' className='payment-link'>
               <h5>Make payment <span>( you have 24hrs to do so)</span></h5>
               <Countdown 
-              date={new Date(myProfile.upgrade_date || endOfDay.getTime())} 
+              date={new Date(myProfile?.upgrade_date || endOfDay.getTime())} 
               renderer={({ hours, minutes, seconds }) => (
               <p>
                 {hours}:{minutes}:{seconds}
