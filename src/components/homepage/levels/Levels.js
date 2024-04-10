@@ -18,7 +18,7 @@ const Levels = () => {
             <Levelcard level='5' money='16,000' members='32'  />
             <Levelcard level='6' money='32,000' members='64'  />
             <Levelcard level='7' money='64,000' members='128'  />
-            <Levelcard level='8' money='128,000' members='2256'  />
+            <Levelcard level='8' money='128,000' members='256'  />
             <Levelcard level='9' money='256,000' members='512'  />
             <Levelcard level='10' money='512,000' members='1024'  />
         </div>
