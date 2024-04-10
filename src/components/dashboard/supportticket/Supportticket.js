@@ -27,7 +27,7 @@ const Supportticket = () => {
                         </svg>
                         <p>Shoot us an email</p>
                     </div>
-                    <a href='mailto:globalfundingclub1@gmail.com'>globalfundingclub1@gmail.com</a>
+                    <a href='mailto:firstgoldengiftedclub@gmail.com'>firstgoldengiftedclub@gmail.com</a>
                 </div>
                 <div className='supportticket-input'>
                     <div className='supportticket-text'>
@@ -55,7 +55,7 @@ const Supportticket = () => {
                         <a href='https://youtube.com/@FirstGoldenGiftedClub?si=T6rTZyLsASShm-Eh' className='social' style={{color: "#FF0000",}}><FaYoutube size={20}/></a>
                         <a href='https://www.tiktok.com/@first.golden.gift?_t=8kOimu6KLvZ&_r=1' className='social' style={{color: "black",}}><FaTiktok size={20}/></a>
                         <a href='https://www.instagram.com/first_golden_gifted_club?igsh=MzNlNGNkZWQ4Mg==' className='social' style={{color: "#E4405F",}}><FaInstagram size={20}/></a>
-                        <a href='' className='social' style={{color: "#4285F4",}}><FaGoogle size={20}/></a>
+                        <a href='google.com' className='social' style={{color: "#4285F4",}}><FaGoogle size={20}/></a>
                         <a href='https://t.me/first_golden_gifted_club' className='social' style={{color: "#0088CC",}}><FaTelegram size={20}/></a>
                     </div>
 
