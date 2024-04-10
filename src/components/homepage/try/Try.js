@@ -5,7 +5,7 @@ import './Try.css'
 const Try = () => {
   return (
     <div className='try-container'>
-        <div className='try-heading'>Try GFC Now</div>
+        <div className='try-heading'>Try FGGC Now</div>
         <div className='try-content'>
             <div className='try-subheading'>
                 <p className='try-black'>Start making money with</p>
