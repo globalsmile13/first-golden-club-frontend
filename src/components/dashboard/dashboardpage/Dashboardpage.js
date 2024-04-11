@@ -9,11 +9,15 @@ import moment from 'moment'
 import { AuthContext } from '../../../context/auth-context'
 import { useHttpClient } from '../../../hooks/less-http-hook'
 import Countdown from "react-countdown";
+import { number_format } from '../../../util/functions'
 
 
 const Dashboardpage = () => {
   const auth = useContext(AuthContext)
-  const [myProfile, setmyProfile] = useState(JSON.parse(localStorage.getItem('myData')));
+  const [myProfile, setmyProfile] = useState(() => {
+    const data = JSON.parse(localStorage.getItem('myData'));
+    return data ? data : null;
+});
   
   const [click, setClick] = useState(false);
   const [transactionDetails, setTransactionDetails] = useState(null);
@@ -78,7 +82,7 @@ const Dashboardpage = () => {
             <Link to='/activate' className='payment-link'>
               <h5>Make payment <span>( you have 24hrs to do so)</span></h5>
               <Countdown 
-              date={new Date(myProfile?.upgrade_date || endOfDay.getTime())} 
+              date={new Date(myProfile?.assigned_members?.upgrade_date || endOfDay.getTime())} 
               renderer={({ hours, minutes, seconds }) => (
               <p>
                 {hours}:{minutes}:{seconds}
@@ -141,7 +145,7 @@ const Dashboardpage = () => {
           </div>
           <div className='wallet-container'>
             <div className='dashboard-wallet'>
-              <h2>₦{myProfile?.wallet?.balance || 0}</h2>
+              <h2>₦{number_format(myProfile?.wallet?.balance || 0)}</h2>
               <p>Global funding club wallet</p>
               <h4>Level {myProfile?.level_id?.level_number || "0"}</h4>
             </div>
@@ -151,10 +155,6 @@ const Dashboardpage = () => {
               <h4>Payout</h4>
               {
                 transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit").slice(0, 5).map((item, index) => {
-
-                  if(item.transaction_type === "credit"){
-                    return
-                  }
                   
                   return (
                       <div className='payout-content' key={index}>

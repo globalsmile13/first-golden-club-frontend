@@ -20,13 +20,15 @@ const Userdetails = () => {
           const response = await sendRequest(`${process.env.REACT_APP_URL}payment/check-payment?transaction_id=${data.transaction_id || ""}`, 'GET', null, {'Authorization': `Bearer ${auth.token}`});
           
           if (response) {
-            console.log(response) 
-            if(response.data.transaction_status === "success"){
-                localStorage.removeItem("uplineData")
-                navigate('/dashboard');
-            }else{
-                alert("Payment not confirmed yet")
-            }
+
+            navigate('/dashboard');
+            localStorage.removeItem("uplineData");
+            // if(response.data.transaction_status === "success"){
+                
+                
+            // }else{
+            //     alert("Payment not confirmed yet")
+            // }
 
           }
   

@@ -6,6 +6,7 @@ import moment from 'moment'
 import axios from 'axios'
 import { useHttpClient } from '../../../hooks/less-http-hook'
 import { AuthContext } from '../../../context/auth-context'
+import { number_format } from '../../../util/functions'
 
 const Paymentapproval = () => {
   const auth = useContext(AuthContext)
@@ -85,8 +86,8 @@ const Paymentapproval = () => {
                   return (
                     <div className='confirm-container'>
                         <div>
-                          <h4>₦{item.amount}</h4>
-                          <h4>Reason: {item.transaction_reason}</h4>
+                          <h4>₦{number_format(item?.amount || 0)}</h4>
+                          <h4>Reason: {item?.transaction_reason || ""}</h4>
                           <p>{item?.ref_id?.profile?.first_name || ""}</p>
                         </div>
                         <button onClick={() => approvePayment(item.transaction_reason, item._id)}>Approve</button>
@@ -125,8 +126,8 @@ const Paymentapproval = () => {
                   return (
                     <div className='confirm-container'>
                         <div>
-                          <h4>₦{item.amount}</h4>
-                          <h4>Reason: {item.transaction_reason}</h4>
+                          <h4>₦{number_format(item?.amount) || 0}</h4>
+                          <h4>Reason: {item?.transaction_reason || ""}</h4>
                           <p>{item?.ref_id?.profile?.first_name || ""}</p>
                         </div>
                         <p style={{color: 'var(--amount-color, #5C5C5C)',
@@ -135,7 +136,7 @@ const Paymentapproval = () => {
                           fontSize: '15px',
                           fontStyle: 'normal',
                           fontWeight: '500',
-                          lineHeight: '153%'}}>Pending</p>
+                          lineHeight: '153%'}}>{item?.transaction_status || "Pending"}</p>
                     </div>
                   )
                 })
