@@ -82,7 +82,7 @@ const Dashboardpage = () => {
             <Link to='/activate' className='payment-link'>
               <h5>Make payment <span>( you have 24hrs to do so)</span></h5>
               <Countdown 
-              date={new Date(myProfile?.assigned_members?.upgrade_date || endOfDay.getTime())} 
+              date={myProfile?.assigned_members?.upgrade_date ? new Date(myProfile.assigned_members.upgrade_date).setDate(new Date(myProfile.assigned_members.upgrade_date).getDate() + 1) : endOfDay.getTime()} 
               renderer={({ hours, minutes, seconds }) => (
               <p>
                 {hours}:{minutes}:{seconds}
