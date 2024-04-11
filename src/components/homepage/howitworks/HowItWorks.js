@@ -7,7 +7,7 @@ const HowItWorks = () => {
     <div className='how-container' id='howitworks'>
         <div className='heading-container'>
             <h2>How it works</h2>
-            <p>Start  a  Global Funidng Account</p>
+            <p>Start First Golden Gifted Club Account</p>
         </div>
         <div className='content'>
             <div className='moto'>

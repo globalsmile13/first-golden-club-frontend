@@ -170,7 +170,7 @@ const Signup = () => {
               </div>
             </form>
             <div className='signup-agreement'>
-              <p>By clicking “Create Account” , I agree with the <Link to='/termsandcondition' className='terms'>terms & conditions</Link> of First Golden GIft Club and its services </p>
+              <p>By clicking “Create Account” , I agree with the <Link to='/termsandcondition' className='terms'>terms & conditions</Link> of First Golden GIfted Club and its services </p>
             </div>
           </div>
         </div>
