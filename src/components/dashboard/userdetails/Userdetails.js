@@ -71,7 +71,7 @@ const Userdetails = () => {
         </div>
         <div className='userdetails-instruction'>
             <p>ALERT THE RECEIVER</p>
-            <p className='instruction-call'>Please call the user before you make payment {isLoading && <Loader color="color-white" className="ml-2" />}</p> 
+            <p className='instruction-call'>Please call the user on Normal call or Whatsapp Call before you make payment {isLoading && <Loader color="color-white" className="ml-2" />}</p> 
         </div>
         <button className='userdetails-button'>
             <button  
