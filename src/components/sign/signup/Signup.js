@@ -120,7 +120,7 @@ const Signup = () => {
                    {errors.username && touched.username && <p className='error-message'>{errors.username}</p>}
                 </div>
                 <div className='signup-label'>
-                  <label htmlFor='phone-number'>Phone Number(Whatsapp Number Preferred)</label>
+                  <label htmlFor='phone-number'>Phone Number <br/>(Whatsapp Number Preferred)</label>
                   <input
                     value={values.phone_number}
                     onChange={handleChange}
