@@ -95,17 +95,17 @@ const Receivedportal = () => {
                 <div>
                     <div className='receivedportal-details'>
                     </div>
-                    <div className='receivedportal-line'></div>
+                    
                 </div>
                 <div>
                     <div className='receivedportal-details'>
                     </div>
-                    <div className='receivedportal-line'></div>
+                   
                 </div>
                 <div>
                     <div className='receivedportal-details'>
                     </div>
-                    <div className='receivedportal-line'></div>
+                    
                 </div>
             </div>
             

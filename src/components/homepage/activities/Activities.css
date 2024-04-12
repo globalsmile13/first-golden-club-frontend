@@ -165,7 +165,7 @@
     }
 
     .even-statement p {
-        width: 240px;
+        width: 200px;
         height: 335px;
         line-height: 2.3;
         overflow: scroll;
@@ -174,7 +174,7 @@
     }
 
     .act-statement p {
-        width: 240px;
+        width: 200px;
         height: 335px;
         line-height: 2.3;
         overflow: scroll;
