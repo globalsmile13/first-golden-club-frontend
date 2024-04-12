@@ -11,7 +11,7 @@ const Constitution = () => {
     <h2>Constitution</h2>
     <div className='content-container'>
         <div className='terms-content'>
-            <h3>GFC Constitution</h3>
+            <h3>FGGC Constitution</h3>
             <div className='your-agreement'>
        
                 <div className='terms-writeup'>

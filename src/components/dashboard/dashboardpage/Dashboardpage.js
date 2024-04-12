@@ -226,15 +226,15 @@ const Dashboardpage = () => {
                   )
                 })}
                 
-                {/* <Dashlevelcard level='2' money='1000' members='2'  />
-                <Dashlevelcard level='3' money='1000' members='2'  />
-                <Dashlevelcard level='4' money='1000' members='2'  />
-                <Dashlevelcard level='5' money='1000' members='2'  />
-                <Dashlevelcard level='6' money='1000' members='2'  />
-                <Dashlevelcard level='7' money='1000' members='2'  />
-                <Dashlevelcard level='8' money='1000' members='2'  />
-                <Dashlevelcard level='9' money='1000' members='2'  />
-                <Dashlevelcard level='10' money='1000' members='2'  /> */}
+                {/* <Dashlevelcard level='2' money='2000' members='2'  />
+                <Dashlevelcard level='3' money='4000' members='2'  />
+                <Dashlevelcard level='4' money='8000' members='2'  />
+                <Dashlevelcard level='5' money='16000' members='2'  />
+                <Dashlevelcard level='6' money='32000' members='2'  />
+                <Dashlevelcard level='7' money='64000' members='2'  />
+                <Dashlevelcard level='8' money='128000' members='2'  />
+                <Dashlevelcard level='9' money='256000' members='2'  />
+                <Dashlevelcard level='10' money='512000' members='2'  /> */}
             </div>
             <div className='potential'>
                 <p>Total potential amount generated from Level 2 to Level 10=#698,028,000</p>
