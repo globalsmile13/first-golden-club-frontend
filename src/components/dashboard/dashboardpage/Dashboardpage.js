@@ -146,7 +146,7 @@ const Dashboardpage = () => {
           <div className='wallet-container'>
             <div className='dashboard-wallet'>
               <h2>₦{number_format(myProfile?.wallet?.balance || 0)}</h2>
-              <p>Global funding club wallet</p>
+              <p>First Golden Gifted club wallet</p>
               <h4>Level {myProfile?.level_id?.level_number || "0"}</h4>
             </div>
           </div>
