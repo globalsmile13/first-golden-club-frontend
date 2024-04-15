@@ -4,7 +4,6 @@ import Logo from '../../assets/fggc.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../../context/auth-context';
 import {useHttpClient} from '../../../hooks/http-hook';
@@ -18,18 +17,7 @@ const Signin = () => {
 
   const {isLoading, sendRequest} = useHttpClient();
 
-  const notify = () => toast("Incorrect username or password. Please try again.", {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-    transition: Bounce,
-
-    } );
+  
 
 
   const signInSchema = Yup.object().shape({
@@ -126,8 +114,8 @@ const Signin = () => {
             </div>
           </div>
           <div className='signin-button'>
-            <button type='submit' onClick={notify}>Login {isLoading && <Loader color="color-white" className="ml-2" />}</button>
-            <ToastContainer />
+            <button type='submit'>Login {isLoading && <Loader color="color-white" className="ml-2" />}</button>
+            
           </div>
         </form>
         <div className='signin-agreement'>
