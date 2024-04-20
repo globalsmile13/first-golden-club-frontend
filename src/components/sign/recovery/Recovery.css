@@ -109,3 +109,57 @@
     }
 }
 
+@media screen and (max-width: 425px) {
+    .recovery-heading {
+        display: flex;
+        gap: 15px;
+
+    }
+    .recovery-headingtext {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 18px;
+    }
+    .recovery-headingtext > h3 {
+        font-size: 18px;
+
+    }
+
+    .recovery-box {
+        width: 300px;
+    }
+
+    .recovery-codebox {
+        font-size: 14px; 
+        width: 280px;
+        height: 50px;
+    }
+
+    .recovery-heading > .logo > img {
+        margin-top: 5px;
+        margin-left: 5px;
+        width: auto;
+        height: 50px;
+    }
+
+    .recovery-text {
+        font-size: 12px; 
+        width: 280px;
+    }
+
+    .recovery-button {
+        border-radius: 15px;
+        width:180px;
+        height:36px;
+        background-color: var(--primary-brown);
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        border: 0px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:1.5rem auto;
+    }
+}
