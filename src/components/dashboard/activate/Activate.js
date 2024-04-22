@@ -72,7 +72,7 @@ const Activate = () => {
                     </svg>
                 </div>
                 <p className='activate-text'>{id === 'subscription' ? 'Process your Advertisement fee' : 'Activate Your Account'}</p>
-                <p className='activate-instruction'>{id === 'subscription' ? 'You are to pay a fee to drive advertisement' : 'You are to activate your account to connect to upline'} </p>
+                <p className='activate-instruction'>{id === 'subscription' ? 'You are to pay a fee to drive advertisement' : 'You are to activate your account to connect to your allocated member'} </p>
             </div>
         </div>
         <div className='activate-button'>
