@@ -15,7 +15,7 @@ import { number_format } from '../../../util/functions'
 const Dashboardpage = () => {
   const auth = useContext(AuthContext)
   const [myProfile, setmyProfile] = useState(() => {
-    const data = JSON.parse(localStorage.getItem('myData'));
+    const data = localStorage.getItem('myData') ? JSON.parse(localStorage.getItem('myData')) : null;
     return data ? data : null;
 });
   

@@ -90,6 +90,7 @@ function App() {
         );
     }
 
+    console.log(istokenLocal)
     
   return (
     
@@ -98,7 +99,7 @@ function App() {
       <AuthContext.Provider
             value={{
             isLoggedIn: !!token,
-            token:token,
+            token: token !== false ? token : istokenLocal?.token,
             userId: userId,
             login: login,
             logout: logout
