@@ -14,7 +14,7 @@ const Activities = () => {
         <div className='card-act odd'>
           <div className='act-statement'>
             <p>Membership fee #1000<br/>
-              Level1<br/>
+            <strong>Level1<br/></strong>
               Level1=2persons cost 1k.<br/>
               Those 2persons send you 1k each.<br/>
               2×1000=#2,000<br/>
@@ -27,7 +27,7 @@ const Activities = () => {
         </div>
         <div className='card-act even'>
           <div className='act-statement'>
-            <p>Level2<br/>
+            <p><strong>Level2<br/></strong>
               Level2=4persons cost 2k<br/>
               Those 4persons send you 2k each.<br/>
               4×2,000=#8,000<br/>
@@ -41,7 +41,7 @@ const Activities = () => {
         </div>
         <div className='card-act odd'>
           <div className='act-statement'>
-            <p>Level3<br/>
+            <p><strong>Level3<br/></strong>
               Level3=8persons cost 4k<br/>
                 Those 8persons send you 4k each.<br/>
                 8×4,000=#32,000<br/>
@@ -56,7 +56,7 @@ const Activities = () => {
         </div>
         <div className='card-act even'>
           <div className='act-statement'>
-            <p>Level4<br/>
+            <p><strong>Level4<br/></strong>
               Level4=16persons cost 8k.<br/>
                 Those 16persons send you 8k each.<br/>
                 16×8,000=#128,000<br/>
@@ -71,7 +71,7 @@ const Activities = () => {
         </div>
         <div className='card-act odd'>
           <div className='act-statement'>
-            <p>Level5<br/>
+            <p><strong>Level5<br/></strong>
                 Level5=32persons cost 16k <br/>
                 Those 32persons send you 16k each.<br/>
                 32×16,000=#512,000<br/>
@@ -85,7 +85,7 @@ const Activities = () => {
         </div>
         <div className='card-act even'>
           <div className='act-statement'>
-            <p>Level6<br/>
+            <p><strong>Level6<br/></strong>
                 Level6=64persons cost 32k.<br/>
                 Those 64persons send you 32k each.<br/>
                 64×32,000=#2,048,000<br/>
@@ -99,7 +99,7 @@ const Activities = () => {
         </div>
         <div className='card-act odd'>
           <div className='act-statement'>
-            <p>Level7<br/>
+            <p><strong>Level7<br/></strong>
                 Level7=128persons cost 64k.<br/>
                 Those 128persons send you 64k each.<br/>
                 128×64,000=#8,192,000<br/>
@@ -114,7 +114,7 @@ const Activities = () => {
         </div>
         <div className='card-act even'>
           <div className='act-statement'>
-            <p>Level8<br/>
+            <p><strong>Level8<br/></strong>
                 Level8=256persons cost 128k.<br/>
                 Those 256persons send you 128k each.<br/>
                 256×128,000=#32,768,000<br/>
@@ -128,7 +128,7 @@ const Activities = () => {
         </div>
         <div className='card-act odd'>
           <div className='act-statement'>
-            <p>Level9<br/>
+            <p><strong>Level9<br/></strong>
               Level9=512persons cost 256k.<br/>
               Those 512persons send you 256k each.<br/>
               512×256,000=#131,072,000<br/>
@@ -142,7 +142,7 @@ const Activities = () => {
         </div>
         <div className='card-act even'>
           <div className='act-statement'>
-            <p>Level10<br/>
+            <p><strong>Level10<br/></strong>
               Level10=1024persons cost 512k.<br/>
               Those 1024persons send you 512k each.<br/>
               1024×512,000=#524,288,000<br/>
