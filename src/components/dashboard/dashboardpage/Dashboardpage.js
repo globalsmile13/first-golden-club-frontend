@@ -60,12 +60,12 @@ const Dashboardpage = () => {
         }
 
         if(responseNotifications){
-          responseNotifications.data.forEach(element => {
+          for (const element of responseNotifications.data.notifications) {
             if(element.read_status === true){
               return setNotificationDetails(true)
               
             }
-          });
+          };
           
         }
 

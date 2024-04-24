@@ -18,7 +18,10 @@ const Notification = () => {
       
       try {
         
-        const response = await sendRequest(`${process.env.REACT_APP_URL}user/notifications`, 'GET', null, {'Authorization': `Bearer ${userData.token}`})
+        const [response, readAll] = await Promise.all([
+            sendRequest(`${process.env.REACT_APP_URL}user/notifications`, 'GET', null, {'Authorization': `Bearer ${userData.token}`}),
+            sendRequest(`${process.env.REACT_APP_URL}user/read-notifications`, 'PATCH', null, {'Authorization': `Bearer ${userData.token}`})
+        ])
 
         if(response.status){
           setNotifications(response.data.notifications )

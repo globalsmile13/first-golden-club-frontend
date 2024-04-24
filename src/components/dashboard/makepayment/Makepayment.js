@@ -15,12 +15,14 @@ const Makepayment = () => {
 
   const {isLoading, sendRequest} = useHttpClient();
 
+  const uplineData = JSON.parse(localStorage.getItem("uplineData"))
+
   
   const initiatePaymentHandler = async() => {
     try {
 
         const response = await sendRequest(`${process.env.REACT_APP_URL}payment/initiate-payment`, 'GET', null, {'Authorization': `Bearer ${auth.token}`});
-        console.log(response)
+        // console.log(response)
         if (response.status === true) {
           const upline_profile = response.data?.profile
 
@@ -53,7 +55,8 @@ const Makepayment = () => {
                 </svg> */}
             </p>
             <div className='makepayment-name'>
-                <h4>{data?.first_name || ""} {data?.last_name || ""}</h4>
+              
+                <h4>{uplineData?.parent?.profile?.first_name || ""} {uplineData?.parent?.profile?.last_name || ""}</h4>
                 {/* <Link to="/dashboard/makepayment/userdetails" className='check-info' >Check info</Link> */}
             </div>
         </div>

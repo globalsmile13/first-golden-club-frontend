@@ -39,6 +39,7 @@ const Activate = () => {
             const response = await sendRequest(`${process.env.REACT_APP_URL}payment/activate-account`, 'GET', null, {'Authorization': `Bearer ${auth.token}`});
             
             if (response.status === true) {
+              localStorage.setItem("uplineData", JSON.stringify(response.data))
               navigate('/dashboard/makepayment');
             }
 
