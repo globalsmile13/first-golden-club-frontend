@@ -129,7 +129,7 @@ a {
         
     }
     
-    .nav-menu li a {
+    .nav-menu li a, .signin {
         color: #fff;
         margin-left: 1rem;
         background-color: orange;
