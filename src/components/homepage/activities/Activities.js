@@ -41,7 +41,8 @@ const Activities = () => {
         </div>
         <div className='card-act odd'>
           <div className='act-statement'>
-            <p>Level3=8persons cost 4k<br/>
+            <p>Level3<br/>
+              Level3=8persons cost 4k<br/>
                 Those 8persons send you 4k each.<br/>
                 8×4,000=#32,000<br/>
                 Upgrade fee to level4 is 8k.<br/>
@@ -55,7 +56,8 @@ const Activities = () => {
         </div>
         <div className='card-act even'>
           <div className='act-statement'>
-            <p>Level4=16persons cost 8k.<br/>
+            <p>Level4<br/>
+              Level4=16persons cost 8k.<br/>
                 Those 16persons send you 8k each.<br/>
                 16×8,000=#128,000<br/>
                 Upgrade fee to level5 is 16k.<br/>
