@@ -130,8 +130,11 @@ a {
     }
     
     .nav-menu li a {
-        color: #000;
+        color: #fff;
         margin-left: 1rem;
+        background-color: orange;
+        border-radius: 10px;
+        padding: 0.3rem;
     }
 
     .nav-item li a:hover {
