@@ -77,7 +77,7 @@ const Dashboardpage = () => {
       <nav className={click? 'dashboard-heading active' : 'dashboard-heading'}>
         <img src= {Logo} alt='Logo'/>
         <div className='dashborad-headingicon'>
-          {myProfile?.upgrade_date !== null && 
+          {myProfile?.assigned_members?.upgrade_date !== null && 
           <div className='dashboard-timeout'>
             <Link to='/activate' className='payment-link'>
               <h5>Make payment <span>( you have 24hrs to do so)</span></h5>
