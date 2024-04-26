@@ -344,6 +344,7 @@ font-weight: 600;
     flex-direction: column;
     justify-content: space-around;
     padding: 1rem;
+    overflow: scroll;
 }
 
 .payout > h4 {
