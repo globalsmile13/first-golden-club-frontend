@@ -129,12 +129,19 @@ a {
         
     }
     
-    .nav-menu li a, .signin {
+    .nav-menu > li > a {
         color: #fff;
         margin-left: 1rem;
         background-color: orange;
         border-radius: 10px;
         padding: 0.3rem;
+    }
+    .signin {
+        color: #fff;
+        margin-left: 1rem;
+        background-color: orange;
+        border-radius: 10px;
+        padding: 0.3rem 0.3rem 0.3rem 1rem;
     }
 
     .nav-item li a:hover {
