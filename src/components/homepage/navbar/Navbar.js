@@ -31,7 +31,7 @@ return (
             <a href='#about'>About</a>
           </li>
           <li className='nav-item'>
-            <a href=''><Link to='/FAQ'>FAQ</Link></a>
+            <a href=''><Link to='/FAQ' className='signin'>FAQ</Link></a>
           </li>
       </ul>
       <ul className='two' >
