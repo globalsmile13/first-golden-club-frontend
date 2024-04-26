@@ -121,6 +121,8 @@ line-height: 153%; /* 45.9px */
         padding: 20px 10px; /* Adjusted padding for smaller screens */
     }
 
+
+
     .userdetails-cover > .userdetails-content {
         padding: 1rem; /* Adjusted padding for smaller screens */
     }
@@ -132,11 +134,7 @@ line-height: 153%; /* 45.9px */
 }
 
 @media screen and (max-width:425px) {
-    .userdetails-container {
-        max-width: 300px;
-        flex-direction: column;
-        justify-content: center;
-    }
+
 
     .userdetails-logo {
         display: flex;
@@ -194,6 +192,22 @@ line-height: 153%; /* 45.9px */
         align-items: center;
         flex-shrink: 0;
         font-size: 13px;
+    }
+
+
+
+    @media only screen and (max-width: 320px) {
+        .userdetails-container{
+            box-sizing: initial;
+        }
+        .userdetails-container {
+            max-width: 300px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #root {
+            width: 300px;
+        }
     }
     
 }
