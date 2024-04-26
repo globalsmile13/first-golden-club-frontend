@@ -145,8 +145,8 @@ const Activities = () => {
             <p><strong>Level10<br/></strong>
               Level10=1024persons cost 512k.<br/>
               Those 1024persons send you 512k each.<br/>
-              1024×512,000=#524,288,000<br/>
-                            </p>
+              1024×512,000=#524,288,0000 <br/>
+              </p>
           </div>
           <div>
             <p className='act-num'>10</p>
