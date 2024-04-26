@@ -142,13 +142,14 @@ const Dashboardpage = () => {
           <div className='leftbar-upgrade'>
             <h4>Upgrade to Level {myProfile?.level_id?.level_number + 1 || "2"}!</h4>
             <p>Level up and earn more by standing a chance to double your in come</p>
+            <p>Total No Of Members in FGGC: </p>
             <Link to='/activate  ' className='dashboard-upgrade'>Upgrade</Link>
           </div>
           <div onClick={() => auth.logout()} className='leftbar-logout'>
             <p>Log out</p>
           </div>
 
-          <p>Total No Of Members in FGGC: </p>
+          
          
         </div>
 
