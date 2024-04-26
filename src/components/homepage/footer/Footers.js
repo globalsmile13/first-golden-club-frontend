@@ -14,6 +14,7 @@ import { FaTelegram } from "react-icons/fa";
 
 
 const Footers = () => {
+    const dateYear = new Date().getFullYear
   return (
     <footer className='footer-container'>
         <div className='footer-content'>
@@ -63,7 +64,7 @@ const Footers = () => {
             </div>
         </div>
         <div className='footer-text'>
-            <p>© 2020 borderless. All rights reserved.</p>
+            <p>© {dateYear} borderless. All rights reserved.</p>
         </div>
     </footer>
 
