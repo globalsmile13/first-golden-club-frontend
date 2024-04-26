@@ -49,7 +49,7 @@ const Notification = () => {
         </div>
         <div className='notification-whole'>
             {isLoading && <p>Loading...</p>}
-            {notifications.map((item,index) => {
+            {notifications.slice().reverse().map((item,index) => {
                 if(item.notification_type.includes("inactive")){
                     return(
                         <div className='notification-content'>

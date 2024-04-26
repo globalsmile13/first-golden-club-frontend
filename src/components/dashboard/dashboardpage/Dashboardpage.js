@@ -16,14 +16,24 @@ import { IoNotificationsSharp } from 'react-icons/io5'
 const Dashboardpage = () => {
   const auth = useContext(AuthContext)
   const [myProfile, setmyProfile] = useState(() => {
-    const data = localStorage.getItem('myData') ? JSON.parse(localStorage.getItem('myData')) : null;
-    return data ? data : null;
+    const storedData = localStorage.getItem('myData');
+    if (storedData && storedData !== "undefined") {
+      try {
+          return JSON.parse(storedData);
+      } catch (error) {
+          console.error("Error parsing JSON:", error);
+          return null;
+      }
+  }
+
+  return null;
+    // return storedData ? JSON.parse(storedData) : null;
 });
   
   const [click, setClick] = useState(false);
   const [transactionDetails, setTransactionDetails] = useState(null);
   const [levelDetails, setLevelDetails] = useState(null);
-  const [notifciaionDetails, setNotificationDetails] = useState(null);
+  const [notifciaionDetails, setNotificationDetails] = useState(false);
 
   const handleClick = () => setClick(!click)
   const createdAt = myProfile?.createdAt || "";
@@ -61,7 +71,7 @@ const Dashboardpage = () => {
 
         if(responseNotifications){
           for (const element of responseNotifications.data.notifications) {
-            if(element.read_status === true){
+            if(element.read_status === false){
               return setNotificationDetails(true)
               
             }
@@ -95,7 +105,7 @@ const Dashboardpage = () => {
             <Link to='/activate' className='payment-link'>
               <h5>Make payment <span>( you have 24hrs to do so)</span></h5>
               <Countdown 
-              date={myProfile?.assigned_members?.upgrade_date ? new Date(myProfile.assigned_members.upgrade_date).setDate(new Date(myProfile.assigned_members.upgrade_date).getDate() + 1) : endOfDay.getTime()} 
+              date={myProfile?.assigned_members?.upgrade_date ? new Date(myProfile?.assigned_members?.upgrade_date).setDate(new Date(myProfile?.assigned_members?.upgrade_date).getDate() + 1) : endOfDay.getTime()} 
               renderer={({ hours, minutes, seconds }) => (
               <p>
                 {hours}:{minutes}:{seconds}
@@ -197,18 +207,18 @@ const Dashboardpage = () => {
               <div className='pay-details'>
                 <p><Link to= "/dashboard/payoutportal" >SEE DETAILS</Link> </p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.63283 5.48252C10.0639 5.15186 10.699 5.17551 11.1014 5.55345L17.3138 11.3958C17.5221 11.5916 17.6348 11.8536 17.6348 12.1254C17.6348 12.3973 17.5223 12.6588 17.3138 12.8553L11.1013 18.6975C10.6722 19.1005 9.97753 19.1005 9.54952 18.6975C9.12023 18.2942 9.12023 17.6409 9.54939 17.2379L14.9856 12.1254L9.54952 7.01303C9.14709 6.63505 9.12191 6.0372 9.47402 5.63177L9.54947 5.55338L9.63283 5.48252Z" fill="#343A40"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M9.63283 5.48252C10.0639 5.15186 10.699 5.17551 11.1014 5.55345L17.3138 11.3958C17.5221 11.5916 17.6348 11.8536 17.6348 12.1254C17.6348 12.3973 17.5223 12.6588 17.3138 12.8553L11.1013 18.6975C10.6722 19.1005 9.97753 19.1005 9.54952 18.6975C9.12023 18.2942 9.12023 17.6409 9.54939 17.2379L14.9856 12.1254L9.54952 7.01303C9.14709 6.63505 9.12191 6.0372 9.47402 5.63177L9.54947 5.55338L9.63283 5.48252Z" fill="#343A40"/>
                 </svg>
               </div>
               
             </div>
             <div className='pay received'>
-              <h4>Payment Received</h4>
+              <h4 >Payment Received</h4>
               {
                 transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit").slice(0, 5).map((item, index) => {
                   
                   return (
-                      <div className='received-content' key={index}>
+                      <div className='received-content' key={index} >
                         <div>
                           <p className='received-name' style={{fontWeight:"700"}}>₦{item.amount || ""}</p>
                           <p className='received-date'>{moment(item.createdAt).format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
@@ -228,7 +238,7 @@ const Dashboardpage = () => {
               <div className='pay-details'>
                 <p><Link to= "/dashboard/receivedportal" >SEE DETAILS</Link></p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.63283 5.48252C10.0639 5.15186 10.699 5.17551 11.1014 5.55345L17.3138 11.3958C17.5221 11.5916 17.6348 11.8536 17.6348 12.1254C17.6348 12.3973 17.5223 12.6588 17.3138 12.8553L11.1013 18.6975C10.6722 19.1005 9.97753 19.1005 9.54952 18.6975C9.12023 18.2942 9.12023 17.6409 9.54939 17.2379L14.9856 12.1254L9.54952 7.01303C9.14709 6.63505 9.12191 6.0372 9.47402 5.63177L9.54947 5.55338L9.63283 5.48252Z" fill="#343A40"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M9.63283 5.48252C10.0639 5.15186 10.699 5.17551 11.1014 5.55345L17.3138 11.3958C17.5221 11.5916 17.6348 11.8536 17.6348 12.1254C17.6348 12.3973 17.5223 12.6588 17.3138 12.8553L11.1013 18.6975C10.6722 19.1005 9.97753 19.1005 9.54952 18.6975C9.12023 18.2942 9.12023 17.6409 9.54939 17.2379L14.9856 12.1254L9.54952 7.01303C9.14709 6.63505 9.12191 6.0372 9.47402 5.63177L9.54947 5.55338L9.63283 5.48252Z" fill="#343A40"/>
                 </svg>
               </div>
               

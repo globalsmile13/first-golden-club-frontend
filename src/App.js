@@ -89,8 +89,6 @@ function App() {
             </>
         );
     }
-
-    console.log(istokenLocal)
     
   return (
     
