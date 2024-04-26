@@ -140,7 +140,7 @@ a {
         color: #fff;
         background-color: orange;
         border-radius: 10px;
-        padding: 0.3rem 0.3rem 0.3rem 1rem;
+        padding: 0.3rem;
     }
 
     .nav-item li a:hover {
