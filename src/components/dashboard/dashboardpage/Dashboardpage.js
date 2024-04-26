@@ -90,7 +90,7 @@ const Dashboardpage = () => {
       <nav className={click? 'dashboard-heading active' : 'dashboard-heading'}>
         <img src= {Logo} alt='Logo'/>
         <div className='dashborad-headingicon'>
-          <p>Total No Of Members: </p>
+          <p>Total No Of Members in FGGC: </p>
           {myProfile?.assigned_members?.upgrade_date !== null && 
           <div className='dashboard-timeout'>
             <Link to='/activate' className='payment-link'>
@@ -137,7 +137,7 @@ const Dashboardpage = () => {
             
             <Link to='/dashboard/genealogy' className='leftbar-link'>Genology</Link>
             <Link to='/supportticket' className='leftbar-link'>Support Ticket</Link>
-            <p>Total No Of Members: </p>
+           
           </div>
           <div className='leftbar-upgrade'>
             <h4>Upgrade to Level {myProfile?.level_id?.level_number + 1 || "2"}!</h4>
@@ -147,6 +147,7 @@ const Dashboardpage = () => {
           <div onClick={() => auth.logout()} className='leftbar-logout'>
             <p>Log out</p>
           </div>
+          <p>Total No Of Members in FGGC: </p>
         </div>
 
         <div className='dashboard-rightbar'>
