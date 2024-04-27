@@ -15,6 +15,7 @@ const Paymentapproval = () => {
   const [refresh, setRefresh] = useState(false)
   const {isLoading, sendRequest} = useHttpClient();
 
+  
 
     useEffect(() => {
       const fetchData = async () => {
@@ -66,7 +67,7 @@ const Paymentapproval = () => {
         </div>
                 
         <div className='paymentapproval-level1' >
-        <h3 className='level-1'>Level 1</h3> 
+        <h3 className='level-1'>Level {myProfile?.level_id?.level_number || "0"}</h3> 
           <div className='paymentapproval-user'><h4>{myProfile?.username || ""}</h4>
             <p>Created: {formattedDate}</p></div> 
             

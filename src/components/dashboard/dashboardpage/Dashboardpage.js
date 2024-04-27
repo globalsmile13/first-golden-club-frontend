@@ -11,6 +11,7 @@ import { useHttpClient } from '../../../hooks/less-http-hook'
 import Countdown from "react-countdown";
 import { number_format } from '../../../util/functions'
 import { IoNotificationsSharp } from 'react-icons/io5'
+import { MdNotificationAdd } from "react-icons/md";
 
 
 const Dashboardpage = () => {
@@ -122,9 +123,11 @@ const Dashboardpage = () => {
               <path d="M12 22C10.8954 22 10 21.1046 10 20H14C14 21.1046 13.1046 22 12 22ZM20 19H4V17L6 16V10.5C6 7.038 7.421 4.793 10 4.18V2H13C12.3479 2.86394 11.9967 3.91762 12 5C12 5.25138 12.0187 5.50241 12.056 5.751H12C10.7799 5.67197 9.60301 6.21765 8.875 7.2C8.25255 8.18456 7.94714 9.33638 8 10.5V17H16V10.5C16 10.289 15.993 10.086 15.979 9.9C16.6405 10.0366 17.3226 10.039 17.985 9.907C17.996 10.118 18 10.319 18 10.507V16L20 17V19ZM17 8C16.3958 8.00073 15.8055 7.81839 15.307 7.477C14.1288 6.67158 13.6811 5.14761 14.2365 3.8329C14.7919 2.5182 16.1966 1.77678 17.5954 2.06004C18.9942 2.34329 19.9998 3.5728 20 5C20 6.65685 18.6569 8 17 8Z" fill="#343A40"/>
             </svg>
           </Link> : <Link to='/notification'>
-          <IoNotificationsSharp className="" style={{
+          <MdNotificationAdd 
+          style={{
             width:"30",
-             height:"30"
+             height:"30",
+             color: "red"
           }} />
           </Link> }
           
@@ -153,7 +156,7 @@ const Dashboardpage = () => {
           <div className='leftbar-upgrade'>
             <h4>Upgrade to Level {myProfile?.level_id?.level_number + 1 || "2"}!</h4>
             <p>Level up and earn more by standing a chance to double your in come</p>
-            <p>Total No Of Members in FGGC: </p>
+            <p>Total No Of Members in FGGC: {myProfile?.all_members_count || "Loading..."}</p>
             <Link to='/activate  ' className='dashboard-upgrade'>Upgrade</Link>
           </div>
           <div onClick={() => auth.logout()} className='leftbar-logout'>
