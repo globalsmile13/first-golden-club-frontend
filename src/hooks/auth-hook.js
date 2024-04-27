@@ -39,6 +39,9 @@ export const useAuth = () => {
     } else {
       clearTimeout(logoutTimer);
     }
+    if(JSON.parse(localStorage.getItem("myData")) === "undefined" || !JSON.parse(localStorage.getItem("myData"))){
+      logout()
+    }
   }, [token, logout, tokenExpirationDate]);
 
   useEffect(() => {

@@ -22,6 +22,7 @@ const Dashboardpage = () => {
           return JSON.parse(storedData);
       } catch (error) {
           console.error("Error parsing JSON:", error);
+          auth.logout()
           return null;
       }
   }
@@ -196,7 +197,7 @@ const Dashboardpage = () => {
                       <div className='payout-content' key={index}>
                         <div>
                           <p className='payout-name' style={{fontWeight:"700"}}>₦{item.amount || ""}</p>
-                          <p className='payout-date'>{moment(item.createdAt).format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
+                          <p className='payout-date'>{moment(item?.createdAt || "").format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
                         </div>
                         <div className='payout-svg'>
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
@@ -227,7 +228,7 @@ const Dashboardpage = () => {
                       <div className='received-content' key={index} >
                         <div>
                           <p className='received-name' style={{fontWeight:"700"}}>₦{item.amount || ""}</p>
-                          <p className='received-date'>{moment(item.createdAt).format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
+                          <p className='received-date'>{moment(item?.createdAt || "").format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
                         </div>
                         <div className='received-svg'>
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
