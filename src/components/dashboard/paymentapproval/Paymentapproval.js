@@ -90,6 +90,7 @@ const Paymentapproval = () => {
                           <h4>₦{number_format(item?.amount || 0)}</h4>
                           <h4>Reason: {item?.transaction_reason || ""}</h4>
                           <p>{item?.ref_id?.profile?.first_name || ""}</p>
+                          <p>{item?.ref_id?.profile?.phone_number || ""}</p>
                         </div>
                         <button onClick={() => approvePayment(item.transaction_reason, item._id)}>Approve</button>
                     </div>
@@ -130,6 +131,7 @@ const Paymentapproval = () => {
                           <h4>₦{number_format(item?.amount) || 0}</h4>
                           <h4>Reason: {item?.transaction_reason || ""}</h4>
                           <p>{item?.ref_id?.profile?.first_name || ""}</p>
+                          <p>{item?.ref_id?.profile?.phone_number || ""}</p>
                         </div>
                         <p style={{color: 'var(--amount-color, #5C5C5C)',
                           textAlign: 'center',

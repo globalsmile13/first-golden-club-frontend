@@ -37,7 +37,7 @@ const Signin = () => {
 
         const response = await sendRequest(`${process.env.REACT_APP_URL}auth/login`, 'POST', data, {'Content-Type': 'application/json'});
         
-        if (response) {
+        if (response.status) {
           // Login successful, navigate to dashboard
           auth.login(response.data._id, response.data.token);
           localStorage.setItem('myData',JSON.stringify(response.data))
