@@ -173,7 +173,7 @@ const Dashboardpage = () => {
           <div className='dashboard-calender'>
             <div className='calender-content'>
               
-              <h3>{myProfile?.profile?.first_name || ""} {myProfile?.profile?.last_name || ""} </h3>
+              <h3>{myProfile?.username || ""} </h3>
               <p>Created:{formattedDate}</p>
             </div>
             <div className='calender-icon'>

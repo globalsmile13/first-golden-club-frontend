@@ -344,7 +344,7 @@ font-weight: 600;
     flex-direction: column;
     justify-content: space-around;
     padding: 1rem;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 .payout > h4 {
@@ -354,6 +354,7 @@ font-weight: 600;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-bottom: 1rem;
 }
 
 .payout-content {
@@ -392,6 +393,7 @@ font-weight: 600;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 1rem;
 }
 
 .received-content {
@@ -432,7 +434,6 @@ font-weight: 600;
     font-style: normal;
     font-weight: 500;
     cursor: pointer;
-    overflow: scroll;
 }
 
 .pay-details > p {

@@ -56,7 +56,7 @@ const Makepayment = () => {
             </p>
             <div className='makepayment-name'>
               
-                <h4>{uplineData?.parent?.profile?.first_name || ""} {uplineData?.parent?.profile?.last_name || ""}</h4>
+                <h4>{uplineData?.parent?.profile?.username || ""} </h4>
                 {/* <Link to="/dashboard/makepayment/userdetails" className='check-info' >Check info</Link> */}
             </div>
         </div>
