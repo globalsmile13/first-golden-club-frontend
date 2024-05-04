@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Dashlevelcard = (props) => {
   return (
-    <div className='level-props'>
+    <div className={`level-props ${props.className}`}>
         <div className='first-level'>
             <div className='num-level'>
                 <p>Lv.{props.level}</p>

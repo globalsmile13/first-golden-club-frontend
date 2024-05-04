@@ -94,6 +94,9 @@ const Dashboardpage = () => {
   const now = new Date();
   const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0)
 
+  const levelNumber = myProfile?.level_id?.level_number || 0;
+  const isBelowLevel = 1 <= levelNumber;
+
   return (
     <div className='dashboard-container'>      
       <div className='hamburger' onClick={handleClick}>
@@ -262,7 +265,7 @@ const Dashboardpage = () => {
             <div className='level-cards center-cards'>
                 {levelDetails && levelDetails.map((item, index) => {
                   return(
-                    <Dashlevelcard level={item?.level_number || '1'} money={item?.member_amount || "0"} upgrade_money={item?.upgrade_amount || "0"} members={item?.members_number || '0'}  key={index}/>
+                    <Dashlevelcard className={isBelowLevel && item?.level_number <= levelNumber && 'ash-back' } level={item?.level_number || '1'} money={item?.member_amount || "0"} upgrade_money={item?.upgrade_amount || "0"} members={item?.members_number || '0'}  key={index}/>
                   )
                 })}
                 
