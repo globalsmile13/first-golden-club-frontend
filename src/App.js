@@ -50,6 +50,7 @@ function App() {
         <>
             <Route path="/dashboard" element= {<Dashboard />} />
             <Route path="/dashboard/makepayment" exact element= {<Makepayment />} />
+            {/* <Route path="/dashboard/makepayment/subscription" exact element= {<Makepayment />} /> */}
             <Route path="/dashboard/makepayment/userdetails" element= {<Userdetails />} />
             <Route path="/dashboard/makepayment/userdetails/paymentpending" element= {<Paymentpending />} />
             <Route path="/dashboard/paymentconfirmed" element= {<Paymentconfirmed />} />
