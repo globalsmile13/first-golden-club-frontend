@@ -172,7 +172,23 @@ const Dashboardpage = () => {
 
         <div className='dashboard-rightbar'>
           <h2>Overview</h2>
-          
+          {myProfile?.deleted_at? 
+          <div style={{color:'white', 
+          background:'red', 
+          borderRadius:'10px', 
+          width:'220px', 
+          padding: '0.5rem', 
+          marginBottom: '1rem', 
+          textAlign: 'left'
+          }}>Your account is inactive</div> : 
+          <div style={{color:'white', 
+          background:'green', 
+          borderRadius:'10px', 
+          width:'200px', 
+          padding: '0.5rem', 
+          marginBottom: '1rem', 
+          textAlign: 'left'
+          }}>Your account is active</div>}
           <div className='dashboard-calender'>
             <div className='calender-content'>
               
