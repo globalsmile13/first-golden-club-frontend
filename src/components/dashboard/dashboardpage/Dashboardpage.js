@@ -172,7 +172,7 @@ const Dashboardpage = () => {
 
         <div className='dashboard-rightbar'>
           <h2>Overview</h2>
-          {myProfile?.deleted_at? 
+          {myProfile?.deleted_at || myProfile?.level_id?.level_number  == undefined ?
           <div style={{color:'white', 
           background:'#FA0000', 
           borderRadius:'10px', 
