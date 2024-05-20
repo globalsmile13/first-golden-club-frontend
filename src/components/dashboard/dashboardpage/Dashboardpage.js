@@ -174,7 +174,7 @@ const Dashboardpage = () => {
           <h2>Overview</h2>
           {myProfile?.deleted_at? 
           <div style={{color:'white', 
-          background:'red', 
+          background:'#FA0000', 
           borderRadius:'10px', 
           width:'220px', 
           padding: '0.5rem', 
@@ -182,7 +182,7 @@ const Dashboardpage = () => {
           textAlign: 'left'
           }}>Your account is inactive</div> : 
           <div style={{color:'white', 
-          background:'green', 
+          background:'#27C500', 
           borderRadius:'10px', 
           width:'200px', 
           padding: '0.5rem', 
