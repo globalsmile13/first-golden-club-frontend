@@ -180,7 +180,7 @@ const Dashboardpage = () => {
           padding: '0.5rem', 
           marginBottom: '1rem', 
           textAlign: 'left'
-          }}>Your account is inactive</div> : 
+          }}>Your account is inactive(Make payment to activate your account)</div> : 
           <div style={{color:'white', 
           background:'#27C500', 
           borderRadius:'10px', 
