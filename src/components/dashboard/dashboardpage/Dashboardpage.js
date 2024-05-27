@@ -92,7 +92,8 @@ const Dashboardpage = () => {
 
 
   const now = new Date();
-  const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0)
+  // const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0)
+  const endOfDay = new Date(now.getTime() + 15 * 60 * 1000);
 
   const levelNumber = myProfile?.level_id?.level_number || 0;
   const isBelowLevel = 1 <= levelNumber;
@@ -109,9 +110,10 @@ const Dashboardpage = () => {
           {myProfile?.assigned_members?.upgrade_date !== null && 
           <div className='dashboard-timeout'>
             <Link to='/activate' className='payment-link'>
-              <h5>Make payment <span>( you have 24hrs to do so)</span></h5>
+              <h5>Make payment <span>( you have 15 mins to do so)</span></h5>
               <Countdown 
-              date={myProfile?.assigned_members?.upgrade_date ? new Date(myProfile?.assigned_members?.upgrade_date).setDate(new Date(myProfile?.assigned_members?.upgrade_date).getDate() + 1) : endOfDay.getTime()} 
+              // date={myProfile?.assigned_members?.upgrade_date ? new Date(myProfile?.assigned_members?.upgrade_date).setDate(new Date(myProfile?.assigned_members?.upgrade_date).getDate() + 1) : endOfDay.getTime()} 
+              date={myProfile?.assigned_members?.upgrade_date ? new Date(myProfile.assigned_members.upgrade_date).getTime() : endOfDay.getTime()}
               renderer={({ hours, minutes, seconds }) => (
               <p>
                 {hours}:{minutes}:{seconds}
