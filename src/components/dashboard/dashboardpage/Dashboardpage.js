@@ -174,7 +174,23 @@ const Dashboardpage = () => {
 
         <div className='dashboard-rightbar'>
           <h2>Overview</h2>
-          
+          {myProfile?.deleted_at || myProfile?.level_id?.level_number  == undefined ?
+          <div style={{color:'white', 
+          background:'#FA0000', 
+          borderRadius:'10px', 
+          width:'220px', 
+          padding: '0.5rem', 
+          marginBottom: '1rem', 
+          textAlign: 'left'
+          }}>Your account is inactive(Make payment to activate your account)</div> : 
+          <div style={{color:'white', 
+          background:'#27C500', 
+          borderRadius:'10px', 
+          width:'200px', 
+          padding: '0.5rem', 
+          marginBottom: '1rem', 
+          textAlign: 'left'
+          }}>Your account is active</div>}
           <div className='dashboard-calender'>
             <div className='calender-content'>
               

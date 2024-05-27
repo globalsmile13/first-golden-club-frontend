@@ -511,7 +511,7 @@ font-weight: 600;
 
     .dashboard-calender {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .calender-icon {
