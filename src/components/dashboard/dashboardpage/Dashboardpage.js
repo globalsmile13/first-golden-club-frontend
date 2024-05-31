@@ -190,7 +190,7 @@ const Dashboardpage = () => {
           padding: '0.5rem', 
           marginBottom: '1rem', 
           textAlign: 'left'
-          }}>Your account is active</div>}
+          }}>Your account is active(Make payment before the 60mins count, not to go inactive and face penalty)</div>}
           <div className='dashboard-calender'>
             <div className='calender-content'>
               
