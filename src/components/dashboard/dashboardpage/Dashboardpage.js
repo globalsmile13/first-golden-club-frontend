@@ -186,11 +186,11 @@ const Dashboardpage = () => {
           <div style={{color:'white', 
           background:'#27C500', 
           borderRadius:'10px', 
-          width:'200px', 
+          width:'220px', 
           padding: '0.5rem', 
           marginBottom: '1rem', 
           textAlign: 'left'
-          }}>Your account is active(Make payment before the 60mins count, not to go inactive and face penalty)</div>}
+          }}>Your account is active<br/>(Make payment before the 1hour count, not to go inactive and face penalty)</div>}
           <div className='dashboard-calender'>
             <div className='calender-content'>
               
