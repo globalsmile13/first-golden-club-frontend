@@ -66,9 +66,9 @@ const Receivedportal = () => {
                 </div>
             </div>
             <div className='receivedportal-content'>
-            {transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit").length === 0 && <p>No transactions found</p>}
+            {transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit" && item.transaction_status !== "pending" ).length === 0 && <p>No transactions found</p>}
             {
-                transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit").map((item, index) => {
+                transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit" && item.transaction_status !== "pending" ).map((item, index) => {
                   
                   return (
                         <div key={index}>

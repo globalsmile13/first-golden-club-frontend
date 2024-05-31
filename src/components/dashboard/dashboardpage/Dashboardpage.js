@@ -215,7 +215,7 @@ const Dashboardpage = () => {
             <div className='pay payout'>
               <h4>Payout</h4>
               {
-                transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit").slice(0, 5).map((item, index) => {
+                transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit" && item.transaction_status !== "pending" ).slice(0, 5).map((item, index) => {
                   
                   return (
                       <div className='payout-content' key={index}>
@@ -246,7 +246,7 @@ const Dashboardpage = () => {
             <div className='pay received'>
               <h4 >Payment Received</h4>
               {
-                transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit").slice(0, 5).map((item, index) => {
+                transactionDetails && transactionDetails.filter(item => item.transaction_type === "credit" && item.transaction_status !== "pending" ).slice(0, 5).map((item, index) => {
                   
                   return (
                       <div className='received-content' key={index} >
