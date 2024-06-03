@@ -93,7 +93,7 @@ const Dashboardpage = () => {
 
   const now = new Date();
   // const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0)
-  const endOfDay = new Date(now.getTime() + 15 * 60 * 1000);
+  const endOfDay = new Date(now.getTime() + 60 * 60 * 1000);
 
   const levelNumber = myProfile?.level_id?.level_number || 0;
   const isBelowLevel = 1 <= levelNumber;
