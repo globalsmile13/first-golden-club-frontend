@@ -70,9 +70,9 @@ const Payoutportal = () => {
             </div>
 
             <div className='payoutportal-content'>
-            {transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit" && item.transaction_status !== "pending" ).length === 0 && <p>No transactions found</p>}
+            {transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit" && item.transaction_status !== "pending"  && item.transaction_status !== "faliure"  ).length === 0 && <p>No transactions found</p>}
             {
-                transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit" && item.transaction_status !== "pending" ).map((item, index) => {
+                transactionDetails && transactionDetails.filter(item => item.transaction_type === "debit" && item.transaction_status !== "pending"  && item.transaction_status !== "faliure"  ).map((item, index) => {
                   
                   return (
                         <div key={index}>
