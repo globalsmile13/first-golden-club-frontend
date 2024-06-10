@@ -48,13 +48,18 @@ const Paymentapproval = () => {
       })
       let url = transaction_reason === "subscription" ? "payment/approve-subscription" :"payment/approve-payment"
 
-      const response = await sendRequest(`${process.env.REACT_APP_URL}${url}`, 'POST', data, 
-      {'Authorization': `Bearer ${auth.token}`,
-      'Content-Type': 'application/json'})
+      try{
+        const response = await sendRequest(`${process.env.REACT_APP_URL}${url}`, 'POST', data, 
+        {'Authorization': `Bearer ${auth.token}`,
+        'Content-Type': 'application/json'})
 
-      if(response){
-        setRefresh(!refresh)
-      }   
+        if(response){
+          setRefresh(!refresh)
+        }   
+      }
+      catch (error) {
+        console.error('Error fetching data:', error);
+      }
     }
 
   return (
