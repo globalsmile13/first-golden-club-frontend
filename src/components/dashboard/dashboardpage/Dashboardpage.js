@@ -284,7 +284,7 @@ const Dashboardpage = () => {
                 <h3>Levels</h3>
             </div>
             <div className='level-cards center-cards'>
-                {levelDetails && levelDetails.map((item, index) => {
+                {levelDetails && levelDetails.slice(0,10).map((item, index) => {
                   return(
                     <Dashlevelcard className={isBelowLevel && item?.level_number <= levelNumber && 'ash-back' } level={item?.level_number || '1'} money={item?.member_amount || "0"} upgrade_money={item?.upgrade_amount || "0"} members={item?.members_number || '0'}  key={index}/>
                   )
