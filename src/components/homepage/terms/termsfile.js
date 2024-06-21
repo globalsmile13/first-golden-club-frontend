@@ -5,10 +5,10 @@ const termsAndConditions = <body>
 <p>First Golden Gifted Club is an online club designed to generate millions of naira to the members through the one-time #1,000 membership fee. When we say millions of naira we're not gazing, members can generate over #50 million in a single month.</p>
 <p>First Golden Gifted Club is to promote unity among the members and protect the interest and welfare of members empowering one another to financial freedom, to help the less privileged, the orphans, and widows in the society.</p>
 <p>Once registration is active by paying (One thousand naira) membership fee, which qualifies one as an active member of the club.</p>
-<p>Active and inactive accounts start from the point of registration. Registration without membership fee remains inactive for 24 hours and is deleted from the system. However, if the membership fee is paid within 24 hours, the account becomes active.</p>
-<p>After receiving the first and second payment in any level, the system will start requesting the member to upgrade to the next level. If the upgrade is delayed before 24 hours TIME OUT, it becomes inactive and will not receive payment during the inactive period until paid up, and the account returns active.</p>
+<p>Active and inactive accounts start from the point of registration. Registration without membership fee remains inactive for 1 hours and is deleted from the system. However, if the membership fee is paid within 1 hours, the account becomes active.</p>
+<p>After receiving the first and second payment in any level, the system will start requesting the member to upgrade to the next level. If the upgrade is delayed before 1 hours TIME OUT, it becomes inactive and will not receive payment during the inactive period until paid up, and the account returns active.</p>
 <p>Members should not delay the approval of payment made into their bank account and submitted to their dashboard for approval for 6 hours because delaying affects the member who made payment to you from stepping up to the level he/she paid you for, such attracted penalty if reported to the support team with payment proof.</p>
-<p>The same thing goes for delay of monthly advert fee. After 24 hours TIME OUT, the account goes inactive and will not receive payment until paid up, and any payment lost during the inactive period will not be recovered.</p>
+<p>The same thing goes for delay of monthly advert fee. After 1 hours TIME OUT, the account goes inactive and will not receive payment until paid up, and any payment lost during the inactive period will not be recovered.</p>
 
 <h2>Total Activities Breakdown</h2>
 <ul>
