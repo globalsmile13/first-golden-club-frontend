@@ -78,7 +78,7 @@ const Payoutportal = () => {
                         <div key={index}>
                         <div className='payoutportal-details'>
                             <div>
-                                <p className='payoutportal-name'>{item?.ref_id?.profile?.first_name || ""} {item?.ref_id?.profile?.last_name || ""}</p>
+                                <p className='payoutportal-name'>{item?.ref_id?.profile?.username || ""}</p>
                                 <p className='payoutportal-date'>{moment(item.createdAt).format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
                                 <p className='payoutportal-cash'>-₦{number_format(item.amount || 0) || "0"}</p>
                             </div>

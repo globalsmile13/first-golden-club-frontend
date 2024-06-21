@@ -75,7 +75,7 @@ const Receivedportal = () => {
                         
                             <div className='receivedportal-details'>
                                 <div>
-                                    <p className='receivedportal-name'>{item?.ref_id?.profile?.first_name || ""} {item?.ref_id?.profile?.last_name || ""}</p>
+                                    <p className='receivedportal-name'>{item?.ref_id?.profile?.username || ""}</p>
                                     <p className='receivedportal-date'>{moment(item.createdAt).format("MMM DD, YYYY | hh:mm:ss A") || moment() || ""}</p>
                                     <p className='receivedportal-cash'>+₦{number_format(item.amount || 0) || "0"}</p>
                                 </div>
