@@ -49,7 +49,7 @@ const Userdetails = () => {
                 <img src={Logo} alt='' />
             </div>
             <div className='userdetails-content'>
-                <h3>{data?.parent_profile?.first_name || ""} {data?.parent_profile?.last_name || ""}</h3>
+                <h3>{data?.parent_profile?.username || ""}</h3>
                 <div className='userdetails-line'></div>
                 <div className='userdetails-info'>
                     <p>Account name</p>
