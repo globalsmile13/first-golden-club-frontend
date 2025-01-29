@@ -106,7 +106,7 @@ const Dashboardpage = () => {
       <nav className={click? 'dashboard-heading active' : 'dashboard-heading'}>
         <img src= {Logo} alt='Logo'/>
         <div className='dashborad-headingicon'>
-          <p>Total No Of Members in FGGCD: {myProfile?.all_members_count || "Loading..."}</p>
+          <p>Total No Of Members in FGGC: {myProfile?.all_members_count || "Loading..."}</p>
           {myProfile?.assigned_members?.upgrade_date !== null && 
           <div className='dashboard-timeout'>
             <Link to='/activate' className='payment-link'>
