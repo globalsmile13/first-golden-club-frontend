@@ -3,7 +3,7 @@ import Logo from '../../assets/fggc.png'
 import './Dashboardpage.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import Dashlevelcard from './dashlevelcard/Dashlevelcard'
-import './Dashboardpage.css'
+//import './Dashboardpage.css'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 import { AuthContext } from '../../../context/auth-context'
@@ -35,7 +35,7 @@ const Dashboardpage = () => {
   const [click, setClick] = useState(false);
   const [transactionDetails, setTransactionDetails] = useState(null);
   const [levelDetails, setLevelDetails] = useState(null);
-  const [notifciaionDetails, setNotificationDetails] = useState(false);
+  const [notificationDetails, setNotificationDetails] = useState(false);
 
   const handleClick = () => setClick(!click)
   const createdAt = myProfile?.createdAt || "";
@@ -63,11 +63,13 @@ const Dashboardpage = () => {
         }
 
         if (responseLevel) {
-        // Remove duplicate levels based on level_number
+          // Remove duplicate levels based on level_number
           const uniqueLevels = responseLevel.data.filter(
             (level, index, self) =>
+              level?.level_number &&
               index === self.findIndex((l) => l.level_number === level.level_number)
           );
+          uniqueLevels.sort((a, b) => a.level_number - b.level_number);
           setLevelDetails(uniqueLevels);
         }
 
@@ -100,13 +102,13 @@ const Dashboardpage = () => {
   // const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0)
   const endOfDay = new Date(now.getTime() + 60 * 60 * 1000);
 
-  const levelNumber = myProfile?.level_id?.level_number || 0;
-  const isBelowLevel = 1 <= levelNumber;
+  const levelNumber = myProfile?.level_id?.level_number || 0; // current user level
+  const isBelowLevel = (item) => item?.level_number <= levelNumber; // check if the card is below or at the user's level
 
   return (
     <div className='dashboard-container'>
       <div className='hamburger' onClick={handleClick}>
-        {click ? <FaTimes size={25} style={{ color: 'var(--primary-brown' }} /> : <FaBars size={20} style={{ color: 'var(--primary-brown' }} />}
+        {click ? <FaTimes size={25} style={{ color: 'var(--primary-brown)' }} /> : <FaBars size={20} style={{ color: 'var(--primary-brown' }} />}
       </div>
       <nav className={click ? 'dashboard-heading active' : 'dashboard-heading'}>
         <img src={Logo} alt='Logo' />
@@ -128,7 +130,7 @@ const Dashboardpage = () => {
             </div>
           }
 
-          {notifciaionDetails ? <Link to='/notification'>
+          {notificationDetails ? <Link to='/notification'>
             <MdNotificationAdd
               style={{
                 width: "30",
@@ -170,7 +172,7 @@ const Dashboardpage = () => {
             <h4>Upgrade to Level {myProfile?.level_id?.level_number + 1 || "2"}!</h4>
             <p>Level up and earn more by standing a chance to double your in come</p>
             <p>Total No Of Members in FGGC: {myProfile?.all_members_count || "Loading..."}</p>
-            <Link to='/activate  ' className='dashboard-upgrade'>Upgrade</Link>
+            <Link to='/activate' className='dashboard-upgrade'>Upgrade</Link>
           </div>
           <div onClick={() => auth.logout()} className='leftbar-logout'>
             <p>Log out</p>
@@ -293,7 +295,15 @@ const Dashboardpage = () => {
             <div className='level-cards center-cards'>
               {levelDetails && levelDetails.slice(0, 10).map((item, index) => {
                 return (
-                  <Dashlevelcard className={isBelowLevel && item?.level_number <= levelNumber && 'ash-back'} level={item?.level_number || '1'} money={item?.member_amount || "0"} upgrade_money={item?.upgrade_amount || "0"} members={item?.members_number || '0'} key={index} />
+                  <Dashlevelcard
+                    className={isBelowLevel(item) && 'ash-back'} // Highlight for levels <= current level
+                    level={item?.level_number || '1'}
+                    money={item?.member_amount || "0"}
+                    upgrade_money={item?.upgrade_amount || "0"}
+                    members={item?.members_number || '0'}
+                    key={index}
+                  />
+
                 )
               })}
 

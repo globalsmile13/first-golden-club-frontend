@@ -12,7 +12,7 @@ const Dashlevelcard = (props) => {
                 
             </div>
             <div className='upgrade-level'>
-                <p className='upgrade-money'>N{props.upgrade_money}</p>
+                <p className='upgrade-money'>N{props.money}</p>
                 <p className='level-upgrade'>Upgrade to lv{props.level}</p>
                 <Link to="/activate" 
                 style={{background:'var(--primary-green)', 
