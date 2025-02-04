@@ -175,7 +175,7 @@ const Userdetails = () => {
           <div className="userdetails-instruction">
             <p>ALERT THE RECEIVER</p>
             <p className="instruction-call">
-              Please call the user on Normal call or Whatsapp Call before you make payment{' '}
+              Please call the member on Normal call or Whatsapp Call before you make payment{' '}
               {isLoading && <Loader color="color-white" className="ml-2" />}
             </p>
           </div>
@@ -186,7 +186,7 @@ const Userdetails = () => {
           </div>
           <div className="userdetails-instruction">
             <p className="instruction-call">
-              If user is unavailable click the button below{' '}
+              If the member is unavailable click the button below{' '}
               {isLoading && <Loader color="color-white" className="ml-2" />}
             </p>
           </div>
