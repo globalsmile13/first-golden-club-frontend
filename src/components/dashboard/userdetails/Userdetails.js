@@ -84,7 +84,7 @@ const Userdetails = () => {
   const allocateAnotherUserHandler = async () => {
     try {
       const response = await sendRequest(
-        `${process.env.REACT_APP_URL}payment/activate-account`,
+        `${process.env.REACT_APP_URL}payment/reassign-user`,
         'POST',
         JSON.stringify({ currentUserId: data?.parent_profile?._id }),
         {
