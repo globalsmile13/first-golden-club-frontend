@@ -125,6 +125,12 @@ const Userdetails = () => {
     }
   };
 
+  const handleAllocateAnotherUser = async () => {
+    await allocateAnotherUserHandler();
+    await fetchData();
+    await checkPaymentHandler();
+  };
+
   useEffect(() => {
     console.log("Updated Data:", data); // Debug log
     console.log("New User:", newUser);   // Debug log
@@ -191,7 +197,7 @@ const Userdetails = () => {
             </p>
           </div>
           <div className="userdetails-button">
-            <button className="pending-link" onClick={allocateAnotherUserHandler}>
+            <button className="pending-link" onClick={handleAllocateAnotherUser}>
               ALLOCATE TO ANOTHER USER
             </button>
           </div>
