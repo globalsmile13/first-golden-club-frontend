@@ -10,6 +10,9 @@ const Userdetails = () => {
   const navigate = useNavigate();
   const auth = useContext(AuthContext);
   const { isLoading, sendRequest } = useHttpClient();
+  const [uplineData, setUplineData] = useState(() => {
+    return JSON.parse(localStorage.getItem("uplineData")) || null;
+  });
 
   const [data, setData] = useState(null);         // Data from initiate-payment
   const [error, setError] = useState(null);         // Error state
