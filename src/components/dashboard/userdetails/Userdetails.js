@@ -67,28 +67,24 @@ const Userdetails = () => {
 
   const initiatePaymentHandler = async () => {
     try {
-      const response = await sendRequest(
-        `${process.env.REACT_APP_URL}payment/initiate-payment`, 
-        'GET', 
-        null, 
-        { 'Authorization': `Bearer ${auth.token}` }
-      );
-
-      if (response.status === true) {
-        const upline_profile = response.data?.profile;
-
-        if (upline_profile.isAdmin === true) {
-          navigate('/dashboard');
-        } else {
-          localStorage.setItem("uplineData", JSON.stringify(response.data));
-          setUplineData(response.data); // 🔄 Ensure the UI updates
-          navigate('/dashboard/makepayment/userdetails');
-        }
+      const url = `${process.env.REACT_APP_URL}payment/initiate-payment`;
+      const headers = { Authorization: `Bearer ${auth.token}` };
+      
+      const response = await sendRequest(url, 'GET', null, headers);
+    
+      if (response && response.data) {
+        console.log("Fetched Data:", response.data);
+        setData(response.data);
+      } else {
+          console.warn("No data received from the payment initiation endpoint");
+          setError("No data received from server");
       }
     } catch (error) {
-      console.error(error.message);
+        console.error("Error initiating payment:", error);
+        setError(error.message || "An error occurred while initiating payment");
     }
-  };
+};
+
 
 
   const checkPaymentHandler = async () => {
