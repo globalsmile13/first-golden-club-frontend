@@ -65,6 +65,21 @@ const Userdetails = () => {
     }
   }, [data]);
 
+  const initiatePaymentHandler = async () => {
+      try {
+        const response = await sendRequest(
+          `${process.env.REACT_APP_URL}payment/initiate-payment`,
+          'GET',
+          null,
+          { Authorization: `Bearer ${auth.token}` }
+        );
+        console.log("Fetched Data:", response.data); // Debugging
+        setData(response.data);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
   const checkPaymentHandler = async () => {
     try {
       const response = await sendRequest(
@@ -127,7 +142,7 @@ const Userdetails = () => {
 
   const handleAllocateAnotherUser = async () => {
     await allocateAnotherUserHandler();
-    await fetchData();
+    await initiatePaymentHandler();
     await checkPaymentHandler();
   };
 
