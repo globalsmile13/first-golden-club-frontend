@@ -143,7 +143,6 @@ const Userdetails = () => {
   const handleAllocateAnotherUser = async () => {
     await allocateAnotherUserHandler();
     await initiatePaymentHandler();
-    await checkPaymentHandler();
   };
 
   useEffect(() => {
