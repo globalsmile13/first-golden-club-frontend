@@ -66,19 +66,25 @@ const Userdetails = () => {
   }, [data]);
 
   const initiatePaymentHandler = async () => {
-      try {
-        const response = await sendRequest(
-          `${process.env.REACT_APP_URL}payment/initiate-payment`,
-          'GET',
-          null,
-          { Authorization: `Bearer ${auth.token}` }
-        );
-        console.log("Fetched Data:", response.data); // Debugging
-        setData(response.data);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
+    try {
+    const url = `${process.env.REACT_APP_URL}payment/initiate-payment`;
+    const headers = { Authorization: `Bearer ${auth.token}` };
+    
+    const response = await sendRequest(url, 'GET', null, headers);
+    
+    if (response && response.data) {
+      console.log("Fetched Data:", response.data);
+      setData(response.data);
+    } else {
+      console.warn("No data received from the payment initiation endpoint");
+      setError("No data received from server");
+    }
+  } catch (error) {
+    console.error("Error initiating payment:", error);
+    setError(error.message || "An error occurred while initiating payment");
+  }
+};
+
 
   const checkPaymentHandler = async () => {
     try {
